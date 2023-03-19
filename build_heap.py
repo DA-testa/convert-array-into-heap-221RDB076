@@ -24,13 +24,10 @@ def build_heap(arr):
     return [swaps, cnt]
 
 if __name__ == '__main__':
-    print ("see?")
     menu = input().strip('\r').strip('\n')
-    print(menu)
     print(menu == "I")
     if(menu == "I"):
         n = int(input())
-        print(n)
         arr = list(map(int, input().split()))
         [swaps, cnt] = build_heap(arr)
         print(cnt)
