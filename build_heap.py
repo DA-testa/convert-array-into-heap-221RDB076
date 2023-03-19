@@ -1,6 +1,9 @@
 #python3
 
-def sift_down(i, arr, swaps, cnt):
+globcnt = 0
+
+def sift_down(i, arr, swaps):
+    global globcnt
     min_index = i
     left_child = 2*i + 1
     right_child = 2*i + 2
@@ -12,24 +15,25 @@ def sift_down(i, arr, swaps, cnt):
     if i != min_index:
         arr[i], arr[min_index] = arr[min_index], arr[i]
         swaps.append((i, min_index))
-        cnt = cnt  +1
-        sift_down(min_index, arr, swaps, cnt)
+        globcnt = globcnt  +1
+        sift_down(min_index, arr, swaps)
 
 def build_heap(arr):
+    global globcnt
+    globcnt = 0
     n = len(arr)
     swaps = []
-    cnt = 0
     for i in range(n // 2, -1, -1):
-        sift_down(i, arr, swaps, cnt)
-    return [swaps, cnt]
+        sift_down(i, arr, swaps)
+    return swaps
 
 if __name__ == '__main__':
     menu = input().strip('\r').strip('\n')
     if(menu == "I"):
         n = int(input())
         arr = list(map(int, input().split()))
-        [swaps, cnt] = build_heap(arr)
-        print(cnt)
+        swaps = build_heap(arr)
+        print(globcnt)
         for i, j in swaps:
             print(i, j)
         print("Kapec tests norauj beigas ar trim un pec tam sudzas ka nav enter A0???????")
