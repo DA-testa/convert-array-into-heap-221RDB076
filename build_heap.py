@@ -36,7 +36,7 @@ if __name__ == '__main__':
         print(globcnt)
         for i, j in swaps:
             print(i, j)
-        print("Kapec tests norauj beigas ar trim un pec tam sudzas ka nav enter A0???????")
+        #print("Kapec tests norauj beigas ar trim un pec tam sudzas ka nav enter A0???????")
         #if (len(swaps) > 0):
         #    print(" \n", end="")
     elif(menu =="F"):
