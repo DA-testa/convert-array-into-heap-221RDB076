@@ -32,6 +32,7 @@ if __name__ == '__main__':
         print(cnt)
         for i, j in swaps:
             print(i, j)
+            print()
         if (len(swaps) > 0):
             print(" \n", end="")
     elif(menu =="F"):
