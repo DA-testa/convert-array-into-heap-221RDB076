@@ -27,7 +27,7 @@ if __name__ == '__main__':
     print ("see?")
     menu = input() 
     print(menu)
-    print("hr")
+    print(menu == "I")
     if(menu == "I"):
         n = int(input())
         print(n)
