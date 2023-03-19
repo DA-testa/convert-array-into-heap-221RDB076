@@ -1,4 +1,5 @@
 #python3
+
 def sift_down(i, arr, swaps):
     min_index = i
     left_child = 2*i + 1
@@ -21,9 +22,15 @@ def build_heap(arr):
     return swaps
 
 if __name__ == '__main__':
-    n = int(input())
-    arr = list(map(int, input().split()))
-    swaps = build_heap(arr)
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    menu = input()
+    if(menu == "I"):
+        n = int(input())
+        arr = list(map(int, input().split()))
+        swaps = build_heap(arr)
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+    elif(menu =="F"):
+         f = open(input(), "r", -1, "UTF-8")
+         print(f.read())
+        
