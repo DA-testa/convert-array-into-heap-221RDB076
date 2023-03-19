@@ -25,7 +25,6 @@ def build_heap(arr):
 
 if __name__ == '__main__':
     menu = input().strip('\r').strip('\n')
-    print(menu == "I")
     if(menu == "I"):
         n = int(input())
         arr = list(map(int, input().split()))
