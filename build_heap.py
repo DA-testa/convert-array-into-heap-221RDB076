@@ -44,8 +44,6 @@ if __name__ == '__main__':
          f = open("tests/"+input(), "r", -1, "UTF-8")
          arr = list(map(int, f.read().split()))
          swaps = build_heap(arr)
-        print(globcnt)
-        for i, j in swaps:
-            print(i, j)         
+         print(globcnt)       
          #print(f.read())
         
