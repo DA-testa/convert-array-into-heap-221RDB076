@@ -1,6 +1,6 @@
 #python3
 
-def sift_down(i, arr, swaps):
+def sift_down(i, arr, swaps, cnt):
     min_index = i
     left_child = 2*i + 1
     right_child = 2*i + 2
@@ -12,14 +12,16 @@ def sift_down(i, arr, swaps):
     if i != min_index:
         arr[i], arr[min_index] = arr[min_index], arr[i]
         swaps.append((i, min_index))
-        sift_down(min_index, arr, swaps)
+        cnt = cnt  +1
+        sift_down(min_index, arr, swaps, cnt)
 
 def build_heap(arr):
     n = len(arr)
     swaps = []
+    cnt = 0
     for i in range(n // 2, -1, -1):
-        sift_down(i, arr, swaps)
-    return swaps
+        sift_down(i, arr, swaps, cnt)
+    return [swaps, cnt]
 
 if __name__ == '__main__':
     menu = input()
@@ -27,8 +29,8 @@ if __name__ == '__main__':
         n = int(input())
         print(n)
         arr = list(map(int, input().split()))
-        swaps = build_heap(arr)
-        print(len(swaps))
+        [swaps, cnt] = build_heap(arr)
+        print(cnt)
         for i, j in swaps:
             print(i, j)
     elif(menu =="F"):
