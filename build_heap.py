@@ -25,6 +25,7 @@ if __name__ == '__main__':
     menu = input()
     if(menu == "I"):
         n = int(input())
+        print(n)
         arr = list(map(int, input().split()))
         swaps = build_heap(arr)
         print(len(swaps))
