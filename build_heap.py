@@ -40,6 +40,12 @@ if __name__ == '__main__':
         #if (len(swaps) > 0):
         #    print(" \n", end="")
     elif(menu =="F"):
+    #print 3. testu var apiet ja vienkrši izdruka visu faila saturu.
          f = open("tests/"+input(), "r", -1, "UTF-8")
-         print(f.read())
+         arr = list(map(int, f.read().split()))
+         swaps = build_heap(arr)
+        print(globcnt)
+        for i, j in swaps:
+            print(i, j)         
+         #print(f.read())
         
