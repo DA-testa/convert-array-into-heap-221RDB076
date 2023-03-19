@@ -24,6 +24,7 @@ def build_heap(arr):
     return [swaps, cnt]
 
 if __name__ == '__main__':
+    print ("see?")
     menu = input()
     if(menu == "I"):
         n = int(input())
