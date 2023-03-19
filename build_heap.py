@@ -40,6 +40,6 @@ if __name__ == '__main__':
         #if (len(swaps) > 0):
         #    print(" \n", end="")
     elif(menu =="F"):
-         f = open("tests/"input(), "r", -1, "UTF-8")
+         f = open("tests/"+input(), "r", -1, "UTF-8")
          print(f.read())
         
