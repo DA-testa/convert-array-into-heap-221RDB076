@@ -1,10 +1,59 @@
 #python3
+from random import randint
 
 globcnt = 0
 
 class heaptreeNode:
     left = ""
     right = ""
+    parent =""
+    value = 0
+
+class heapTree:
+    root = ""
+    count = 0
+    def add(n: heaptreeNode):
+        if(root ==""):
+            root = n
+            count = count+1
+            return
+        node = root
+        k = randint(0, 1)
+        if (k==0):
+            while(True):
+                if(node.right ==""):
+                    node.right = n
+                    n.parent = node
+                    break
+            node = node.right
+        else:
+            while(True):
+                if(node.left == ""):
+                    node.left = n
+                    n.parent = node
+                    break
+            node = node.left
+        #siftup
+        while(True):
+            if(n.parent==""):
+                break
+            if(n.parent.value < n.value):
+                break
+        theleft = n.left
+        theright = n.right
+        theparent = n.parent.parent
+        if n.parent.left != n :
+            n.left = n.parent.left
+            n.parent.right = theright
+            n.parent.left = theleft
+            n.right = n.parent
+        else:
+            n.right = n.parent.right
+            n.parent.right = theright
+            n.parent.left = theleft
+            n.left = n.parent
+        n.parent.parent = n
+        n.parent = theparent
 
 def sift_down(i, arr, swaps):
     global globcnt
