@@ -34,7 +34,7 @@ def build_heap(arr):
 if __name__ == '__main__':
     menu = input().strip('\r').strip('\n')
     if(menu == "I"):
-        n = int(input().strip('\r').strip('\n'))
+        n = int(input().strip('\r').strip('\n')) 
         arr = list(map(int, input().split()))
         swaps = build_heap(arr)
         print(globcnt)
