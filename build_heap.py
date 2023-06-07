@@ -2,6 +2,10 @@
 
 globcnt = 0
 
+class heaptreeNode:
+    left
+    right
+
 def sift_down(i, arr, swaps):
     global globcnt
     min_index = i
