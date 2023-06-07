@@ -3,8 +3,8 @@
 globcnt = 0
 
 class heaptreeNode:
-    left
-    right
+    left = ""
+    right = ""
 
 def sift_down(i, arr, swaps):
     global globcnt
